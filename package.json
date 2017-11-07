@@ -1,0 +1,25 @@
+{
+  "name": "canfeit",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "author": "wangjianhui <wangjianhui@herebookstore.com> (https://github.com/canfeit/canfeit/blob/master/README.md)",
+  "homepage": "https://github.com/canfeit/canfeit/blob/master/README.md",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/canfeit/canfeit.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cross-spawn": "",
+    "fs-extra": ""
+  },
+  "scripts": {
+    "install" :"node -e console.log('#'.repeat(80)+'\\n\\n','docs:'+process.env.npm_package_homepage,'\\n\\n'+'#'.repeat(80))",
+    "postinstall": "node main"
+  },
+  "bugs": {
+    "url": "https://github.com/canfeit/canfeit/issues"
+  }
+}
