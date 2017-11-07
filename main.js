@@ -1,6 +1,5 @@
 const fs = require('fs-extra');
 const path = require('path');
-const spawn = require('cross-spawn');
 
 const appPath = path.join('..', '..')
 const templatePath = 'template';
@@ -35,24 +34,4 @@ fs.writeFileSync(
 
 if (fs.existsSync(templatePath)) {
     fs.copySync(templatePath, appPath);
-}
-
-command = `cd ${appPath}&&yarn`;
-args = [
-    'add',
-    "@commitlint/cli",
-    "@commitlint/config-angular",
-    "eslint-plugin-typescript",
-    "husky",
-    "standard",
-    "standard-version",
-    "typedoc",
-    "typescript-eslint-parser",
-    "typescript"
-];
-console.log(command)
-const proc = spawn.sync(command, args, { stdio: 'inherit' });
-if (proc.status !== 0) {
-    console.error(`\`${command} ${args.join(' ')}\` failed`);
-    return;
 }

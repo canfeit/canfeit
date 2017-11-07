@@ -12,11 +12,19 @@
   },
   "license": "MIT",
   "dependencies": {
-    "cross-spawn": "",
-    "fs-extra": ""
+    "fs-extra": "",
+    "@commitlint/cli": "",
+    "@commitlint/config-angular": "",
+    "eslint-plugin-typescript": "",
+    "husky": "",
+    "standard": "",
+    "standard-version": "",
+    "typedoc": "",
+    "typescript-eslint-parser": "",
+    "typescript": ""
   },
   "scripts": {
-    "install" :"node -e console.log('#'.repeat(80)+'\\n\\n','docs:'+process.env.npm_package_homepage,'\\n\\n'+'#'.repeat(80))",
+    "install": "node -e console.log('#'.repeat(80)+'\\n\\n','docs:'+process.env.npm_package_homepage,'\\n\\n'+'#'.repeat(80))",
     "postinstall": "node main"
   },
   "bugs": {
