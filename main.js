@@ -3,14 +3,17 @@ const path = require('path');
 
 const appPath = path.join('..', '..')
 const templatePath = 'template';
-const appPackage = require(path.join(appPath, 'package.json'));
-console.log('your current package.json',appPackage)
+const appPackage = fs.existsSync(path.join(appPath, 'package.json')) ?
+    require(path.join(appPath, 'package.json')) :
+    {};
+console.log('your current package.json', appPackage)
 appPackage.scripts = appPackage.scripts || {}
 appPackage.scripts.release = appPackage.scripts.release || "standard-version&&yarn doc";
 appPackage.scripts.push = appPackage.scripts.push || "git push --follow-tags&&npm publish";
 appPackage.scripts.doc = appPackage.scripts.doc || "typedoc --out docs --mode file --theme minimal --readme none";
 appPackage.scripts.install = appPackage.scripts.install || "yarn global upgrade-interactive --latest&yarn upgradeInteractive --latest";
 appPackage.scripts.commitmsg = appPackage.scripts.commitmsg || "commitlint -e";
+appPackage.scripts.postinstall = appPackage.scripts.postinstall || "node -e console.log('#'.repeat(80)+'\\n\\n','docs:'+process.env.npm_package_homepage,'\\n\\n'+'#'.repeat(80))";
 if (!appPackage.commitlint) {
     appPackage.commitlint = {
         "extends": [

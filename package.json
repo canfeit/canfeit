@@ -12,22 +12,37 @@
   },
   "license": "MIT",
   "dependencies": {
-    "fs-extra": "",
     "@commitlint/cli": "",
     "@commitlint/config-angular": "",
     "eslint-plugin-typescript": "",
+    "fs-extra": "",
     "husky": "",
     "standard": "",
     "standard-version": "",
     "typedoc": "",
-    "typescript-eslint-parser": "",
-    "typescript": ""
+    "typescript": "",
+    "typescript-eslint-parser": ""
   },
   "scripts": {
-    "install": "node -e console.log('#'.repeat(80)+'\\n\\n','docs:'+process.env.npm_package_homepage,'\\n\\n'+'#'.repeat(80))",
-    "postinstall": "node main"
+    "postinstall": "node main",
+    "release": "standard-version&&yarn doc",
+    "push": "git push --follow-tags&&npm publish",
+    "doc": "typedoc --out docs --mode file --theme minimal --readme none",
+    "install": "yarn global upgrade-interactive --latest&yarn upgradeInteractive --latest",
+    "commitmsg": "commitlint -e"
   },
   "bugs": {
     "url": "https://github.com/canfeit/canfeit/issues"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-angular"
+    ]
+  },
+  "standard": {
+    "parser": "typescript-eslint-parser",
+    "plugins": [
+      "typescript"
+    ]
   }
 }
