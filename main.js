@@ -5,7 +5,22 @@ const appPath = path.join('..', '..')
 const templatePath = 'template'
 const appPackage = fs.existsSync(path.join(appPath, 'package.json'))
   ? require(path.join(appPath, 'package.json'))
-  : {}
+  : {
+    "name": "canfeit",
+    "version": "0.0.1",
+    "description": "",
+    "keywords": [],
+    "author": "wangjianhui <wangjianhui@herebookstore.com> (https://github.com/canfeit/canfeit/blob/master/README.md)",
+    "homepage": "https://github.com/canfeit/canfeit/blob/master/README.md",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/canfeit/canfeit.git"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/canfeit/canfeit/issues"
+    },
+  }
 
 appPackage.scripts = appPackage.scripts || {}
 appPackage.scripts.release = appPackage.scripts.release || 'standard-version&&yarn doc'
