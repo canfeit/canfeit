@@ -1,6 +1,6 @@
 {
   "name": "canfeit",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "keywords": [],
   "author": "wangjianhui <wangjianhui@herebookstore.com> (https://github.com/canfeit/canfeit/blob/master/README.md)",
@@ -24,10 +24,10 @@
     "typescript-eslint-parser": ""
   },
   "scripts": {
-    "postinstall": "node main",
     "release": "standard-version",
     "push": "git push --follow-tags&&npm publish",
     "install": "yarn global upgrade --latest&yarn upgrade --latest",
+    "postinstall": "node main",
     "commitmsg": "commitlint -e"
   },
   "bugs": {
