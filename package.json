@@ -27,7 +27,7 @@
     "postinstall": "node main",
     "release": "standard-version",
     "push": "git push --follow-tags&&npm publish",
-    "install": "yarn global upgrade-interactive --latest&yarn upgradeInteractive --latest",
+    "install": "yarn global upgrade --latest&yarn upgrade --latest",
     "commitmsg": "commitlint -e"
   },
   "bugs": {
