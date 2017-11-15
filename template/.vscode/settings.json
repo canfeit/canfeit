@@ -11,5 +11,6 @@
             "language": "typescript",
             "autoFix": true
         }
-    ]
+    ],
+    "editor.wordWrap": "on"
 }
