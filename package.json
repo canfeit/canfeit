@@ -24,9 +24,9 @@
     "typescript-eslint-parser": ""
   },
   "scripts": {
-    "pro": "npm run push&&npm run release",
-    "push": "standard-version",
-    "release": "git push --follow-tags&&npm publish",
+    "pro": "npm run release&&npm run push",
+    "release": "standard-version",
+    "push": "git push --follow-tags&&npm publish",
     "install": "yarn global upgrade --latest&yarn upgrade --latest",
     "postinstall": "node main",
     "commitmsg": "commitlint -e"
