@@ -1,6 +1,6 @@
 {
   "name": "canfeit",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "",
   "keywords": [],
   "author": "wangjianhui <wangjianhui@herebookstore.com> (https://github.com/canfeit/canfeit/blob/master/README.md)",
@@ -25,8 +25,8 @@
   },
   "scripts": {
     "pro": "npm run push&&npm run release",
-    "push": "standard-version&&git push --follow-tags",
-    "release": "npm publish",
+    "push": "standard-version",
+    "release": "git push --follow-tags&&npm publish",
     "install": "yarn global upgrade --latest&yarn upgrade --latest",
     "postinstall": "node main",
     "commitmsg": "commitlint -e"
