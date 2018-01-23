@@ -8,6 +8,9 @@ const appPackage = fs.existsSync(path.join(appPath, 'package.json'))
   : {
     'name': 'canfeit',
     'version': '0.0.1',
+    'engines': {
+      'node': '>= 7.6.0'
+    },
     'description': '',
     'keywords': [],
     'author': 'wangjianhui <wangjianhui@herebookstore.com> (https://github.com/canfeit/canfeit/blob/master/README.md)',
@@ -17,17 +20,17 @@ const appPackage = fs.existsSync(path.join(appPath, 'package.json'))
       'url': 'https://github.com/canfeit/canfeit.git'
     },
     'license': 'MIT',
+    'files': [ ],
     'bugs': {
       'url': 'https://github.com/canfeit/canfeit/issues'
     }
   }
 
 appPackage.scripts = appPackage.scripts || {}
-appPackage.scripts.pro = appPackage.scripts.pro || 'npm run release&&npm run push'
+appPackage.scripts.prod = appPackage.scripts.prod || 'npm run release&&npm run push'
 appPackage.scripts.release = appPackage.scripts.release || 'standard-version&&yarn doc'
 appPackage.scripts.push = appPackage.scripts.push || 'git push --follow-tags&&npm publish'
 appPackage.scripts.doc = appPackage.scripts.doc || 'typedoc --out docs --mode file --theme minimal --readme none'
-appPackage.scripts.install = appPackage.scripts.install || 'yarn global upgrade --latest&yarn upgrade --latest'
 appPackage.scripts.commitmsg = appPackage.scripts.commitmsg || 'commitlint -e'
 appPackage.scripts.postinstall = appPackage.scripts.postinstall || "node -e console.log('#'.repeat(80)+'\\n\\n','docs:'+process.env.npm_package_homepage,'\\n\\n'+'#'.repeat(80))"
 if (!appPackage.commitlint) {
