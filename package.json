@@ -1,6 +1,6 @@
 {
   "name": "canfeit",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "engines": {
     "node": ">= 7.6.0"
   },
