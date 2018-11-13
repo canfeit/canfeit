@@ -23,8 +23,7 @@
   "scripts": {
     "release": "semantic-release",
     "prepublish": "git push --follow-tags",
-    "postinstall": "node -e console.log('#'.repeat(80)+'\\n\\n','docs:'+process.env.npm_package_homepage,'\\n\\n'+'#'.repeat(80))",
-    "semantic-release": "semantic-release"
+    "postinstall": "node -e console.log('#'.repeat(80)+'\\n\\n','docs:'+process.env.npm_package_homepage,'\\n\\n'+'#'.repeat(80))"
   },
   "bugs": {
     "url": "https://github.com/canfeit/canfeit/issues"
