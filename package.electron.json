@@ -1,0 +1,43 @@
+{
+  "name": "testwa",
+  "main": "main/main.js",
+  "scripts": {
+    "start": "concurrently \"yarn start-react\" \"node sleep 10&&yarn start-electron\"",
+    "package": "build -mw --publish always",
+    "packdir": "build --dir -c.asar=false",
+    "postinstall": "build install-app-deps"
+  },
+  "build": {
+    "productName": "TestwaGen",
+    "appId": "com.testwa.desktop",
+    "copyright": "Copyright © 2018 testwa",
+    "mac": {
+      "target": "dmg"
+    },
+    "files": [
+      {
+        "from": "dist/renderer",
+        "to": "renderer"
+      },
+      {
+        "from": "src/main",
+        "to": "main"
+      },
+      "!**/{LICENSE,LICENCE,license,*LICENSE,LICENSE*,CHANGELOG*,README*,AUTHORS,.gitmodules,.vscode,.yarnclean}",
+      "!**/*.{png,jpg,JPG,PNG,jpeg,gif,map,un~}",
+      "!static/",
+      "!docs/",
+      "!src/",
+      "!tests/",
+      "!sleep.js"
+    ],
+    "extraResources": ["static/minitouch/libs"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canfeit/testwa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/canfeit/testwa/issues"
+  }
+}
