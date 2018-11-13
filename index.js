@@ -74,6 +74,8 @@ export default class extends Component {
     });
   }
   componentDidMount() {
+    import { f } from "../assembly/sample.js";
+    console.log("wasm start", f(10));
     this.minitouch = require("net").connect({ port: 1718 });
     this.minicap = require("net").connect({ port: 1717 });
     this.info();
