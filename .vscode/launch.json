@@ -6,6 +6,16 @@
       "name": "Debug Main Process",
       "runtimeExecutable": "yarn",
       "runtimeArgs": ["start"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "node",
+      "program": "${workspaceRoot}/server.js",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "protocol": "inspector"
     }
   ]
 }

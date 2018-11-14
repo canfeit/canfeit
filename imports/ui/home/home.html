@@ -1,0 +1,14 @@
+<template name="home">
+  <ul>
+    {{#each blogsData}} {{> blog}} {{/each}}
+  </ul>
+</template>
+
+<template name="blog">
+
+  <li>
+    <h1>{{title}}</h1>
+    <a href="#" class="delete">delete</a>
+    <p>{{content}}</p>
+  </li>
+</template>
