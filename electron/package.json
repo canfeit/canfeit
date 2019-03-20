@@ -1,0 +1,9 @@
+{
+  "name": "hello-nw",
+  "main": "index.html",
+  "scripts": {
+    "start-electron": "electron ./electron.js",
+    "start-nw": "nw .",
+    "start-b": "electron ./baidu.js"
+  }
+}
