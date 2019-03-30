@@ -1,1 +1,1 @@
-console.log("小花狗");
+console.log("小黑🐶");

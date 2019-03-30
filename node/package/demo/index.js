@@ -1,1 +1,1 @@
-console.log("小金鱼");
+console.log("小丑🐟");
