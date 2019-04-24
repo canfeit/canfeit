@@ -14,6 +14,7 @@ createConnection()
     let orders = await connection
       .getRepository(Order)
       .createQueryBuilder("order")
+      .select("DISTINCT *")
       .where(
         "date(order.SERVICE_END_TIME) between '2019-03-01' and '2019-03-31' and (order.TRADESTATE = :state1 OR order.TRADESTATE = :state2 OR order.TRADESTATE = :state3 OR order.TRADESTATE = :state4)",
         {
@@ -23,7 +24,7 @@ createConnection()
           state4: "FINISH"
         }
       )
-      .getMany();
+      .getRawMany();
     let pp = await connection
       .getRepository(PP)
       .createQueryBuilder("pp")
