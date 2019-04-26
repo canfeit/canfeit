@@ -25,6 +25,7 @@
 //     productList2 = Array.from(new Set(productList));
 const product = {
   "1": {
+    //精致V脸
     洁手晶露: { DOSAGE: "0.5", UNIT: "g", COST: "26" },
     玫瑰精油: { DOSAGE: "3", UNIT: "滴", COST: "450" },
     舒压: { DOSAGE: "0", UNIT: "ml", COST: "0" },
@@ -45,6 +46,7 @@ const product = {
     "湿凝霜 ": { DOSAGE: "1.5", UNIT: "g", COST: "620" }
   },
   "2": {
+    //水颜活泉
     洁手晶露: { DOSAGE: "0.5", UNIT: "g", COST: "26" },
     玫瑰精油: { DOSAGE: "3", UNIT: "滴", COST: "450" },
     舒压放松: { DOSAGE: "0", UNIT: "ml", COST: "0" },
@@ -67,6 +69,7 @@ const product = {
     湿凝霜: { DOSAGE: "1.5", UNIT: "克", COST: "620" }
   },
   "3": {
+    //紧致润透
     洁手晶露: { DOSAGE: "0.5", UNIT: "ML", COST: "26" },
     玫瑰精油: { DOSAGE: "1", UNIT: "滴", COST: "150" },
     舒压: { DOSAGE: "0", UNIT: "ML", COST: "0" },
@@ -86,6 +89,7 @@ const product = {
     "面霜 ": { DOSAGE: "1", UNIT: "G", COST: "358" }
   },
   "4": {
+    //净透润白
     洁手晶露: { DOSAGE: "0.5", UNIT: "g", COST: "26" },
     玫瑰精油: { DOSAGE: "1", UNIT: "滴", COST: "150" },
     舒压: { DOSAGE: "0", UNIT: "ml", COST: "0" },
@@ -106,6 +110,7 @@ const product = {
     湿凝霜: { DOSAGE: "1.5", UNIT: "g", COST: "620" }
   },
   "5": {
+    //明眸睛喜
     洁手晶露: { DOSAGE: "0.5", UNIT: "g", COST: "26" },
     玫瑰精油: { DOSAGE: "3", UNIT: "滴", COST: "450" },
     凝韵轻柔卸妆乳: { DOSAGE: "2", UNIT: "ml", COST: "160" },
@@ -117,6 +122,7 @@ const product = {
     湿凝霜: { DOSAGE: "1", UNIT: "g", COST: "411" }
   },
   "6": {
+    //全身SPA
     洁手晶露: { DOSAGE: "0.5", UNIT: "g", COST: "26" },
     玫瑰精油: { DOSAGE: "3", UNIT: "滴", COST: "450" },
     舒压: { DOSAGE: "0", UNIT: "", COST: "0" },
@@ -129,6 +135,7 @@ const product = {
     热灸石: { DOSAGE: "", UNIT: "", COST: "0" }
   },
   "7": {
+    //背部SPA
     洁手晶露: { DOSAGE: "0.5", UNIT: "g", COST: "26" },
     玫瑰精油: { DOSAGE: "3", UNIT: "滴", COST: "450" },
     舒压: { DOSAGE: "0", UNIT: "ml", COST: "0" },
@@ -137,6 +144,7 @@ const product = {
     热灸石: { DOSAGE: "0", UNIT: "", COST: "0" }
   },
   "8": {
+    //豪华版肩颈SPA
     洁手晶露: { DOSAGE: "0.5", UNIT: "g", COST: "26" },
     玫瑰精油: { DOSAGE: "3", UNIT: "滴", COST: "450" },
     舒压: { DOSAGE: "0", UNIT: "ml", COST: "0" },
@@ -145,6 +153,7 @@ const product = {
     热灸石: { DOSAGE: "0", UNIT: "", COST: "0" }
   },
   "9": {
+    //肩颈SPA
     洁手晶露: { DOSAGE: "0.5", UNIT: "g", COST: "26" },
     玫瑰精油: { DOSAGE: "3", UNIT: "滴", COST: "450" },
     舒压: { DOSAGE: "0", UNIT: "ml", COST: "0" },
@@ -153,6 +162,7 @@ const product = {
     热灸石: { DOSAGE: "0", UNIT: "", COST: "0" }
   },
   "10": {
+    //手部SPA
     洁手晶露: { DOSAGE: "0.5", UNIT: "ML", COST: "26" },
     玫瑰精油: { DOSAGE: "3", UNIT: "滴", COST: "450" },
     舒压: { DOSAGE: "0", UNIT: "ml", COST: "0" },
@@ -165,6 +175,7 @@ const product = {
     热灸石: { DOSAGE: "0", UNIT: "", COST: "0" }
   },
   "11": {
+    //腰腹SPA
     洁手晶露: { DOSAGE: "0.5", UNIT: "g", COST: "26" },
     玫瑰精油: { DOSAGE: "3", UNIT: "滴", COST: "450" },
     舒压: { DOSAGE: "0", UNIT: "ml", COST: "0" },
@@ -177,6 +188,7 @@ const product = {
     热灸石: { DOSAGE: "", UNIT: "", COST: "0" }
   },
   "12": {
+    //腰部SPA
     洁手晶露: { DOSAGE: "0.5", UNIT: "g", COST: "26" },
     玫瑰精油: { DOSAGE: "3", UNIT: "滴", COST: "450" },
     舒压: { DOSAGE: "0", UNIT: "ml", COST: "0" },
@@ -185,6 +197,7 @@ const product = {
     热灸石: { DOSAGE: "", UNIT: "", COST: "0" }
   },
   "13": {
+    //腿部SPA
     洁手晶露: { DOSAGE: "0.5", UNIT: "g", COST: "26" },
     玫瑰精油: { DOSAGE: "3", UNIT: "滴", COST: "450" },
     舒压: { DOSAGE: "0", UNIT: "ml", COST: "0" },
@@ -197,8 +210,12 @@ const product = {
     热灸石: { DOSAGE: "", UNIT: "", COST: "0" }
   }
 };
-console.log("*********************项目消耗产品信息", product);
-const input = { "1": 1, "2": 3 };
+// console.log("*********************项目消耗产品信息", product);
+//  "1"//精致V脸 "2"//水颜活泉     "3" //紧致润透    "4"  //净透润白  "5"//明眸睛喜
+// "6"//全身SPA  "7"//背部SPA  "8"//豪华版肩颈SPA
+//  "9"//肩颈SPA  "10"//手部SPA  "11"//腰腹SPA  "12"//腰部SPA  "13"//腿部SPA
+
+const input = { "1": 2 };
 const data = {};
 for (const i in input) {
   for (const k in product[i]) {
@@ -206,6 +223,6 @@ for (const i in input) {
   }
 }
 console.log(data);
-let result = ",手机号,单数," + productList2.join() + "\n";
+// let result = ",手机号,单数," + productList2.join() + "\n";
 // })
 // .catch(error => console.log(error));
